@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="theme-color" content="#1e1e1e" />
+    <meta
+      name="description"
+      content="CipherStudio – Browser-based React IDE for building, editing, and previewing projects in real time."
+    />
+
+    <title>CipherStudio | Assignment</title>
+
+    <!-- google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fav. ico. your path write here -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- SEO Tags -->
+    <meta property="og:title" content="CipherStudio – Browser React IDE" />
+    <meta
+      property="og:description"
+      content="A modern web-based React playground with live preview, file system, and theme support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="%PUBLIC_URL%/preview.png" />
+
+    <!-- Smooth animation setup -->
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        overflow: hidden;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      #root {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Fallback React fails to load */
+      .loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #1e1e1e;
+        color: #9cdcfe;
+        font-size: 1.2rem;
+        font-family: "Fira Code", monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Root React container -->
+    <div id="root">
+      <div class="loading-screen">
+        ⚙️ CipherStudio loading...
+      </div>
+    </div>
+  </body>
+</html>
